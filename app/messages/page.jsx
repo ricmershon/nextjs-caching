@@ -14,7 +14,7 @@ import Messages from '@/components/messages';
 
 // 'fetchCache = 'force-no-store' is a Next.js reserved word and takes different values.
 // 'force-no-store' is the same as cache: 'no-store'.
-// export const fetchCache = 'force-no-store'
+// export const fetchCache = 'force-no-store';
 
 export default async function MessagesPage() {
     // unstable_noStore();
