@@ -21,6 +21,9 @@ export default async function MessagesPage() {
     // Next.js overrides the default fetch function and includes a 'cache' object
     // in the options object.
     const response = await fetch('http://localhost:8080/messages', {
+        next: {
+            tags: ['message']
+        }
         // cache: 'force-cache'    // Ensures response will be cached
         // cache: 'no-store'       // Does not cache response and always send new request
         // next: {
