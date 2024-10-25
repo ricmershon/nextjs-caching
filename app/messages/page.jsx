@@ -17,7 +17,7 @@ import Messages from '@/components/messages';
 // 'force-no-store' is the same as cache: 'no-store'.
 // export const fetchCache = 'force-no-store';
 
-export default function MessagesPage() {
+export default async function MessagesPage() {
     // unstable_noStore();
     // Next.js overrides the default fetch function and includes a 'cache' object
     // in the options object.
@@ -33,7 +33,7 @@ export default function MessagesPage() {
     // });
     // const messages = await response.json();
     
-    const messages = getMessages();
+    const messages = await getMessages();
 
     if (!messages || messages.length === 0) {
         return <p>No messages found</p>;
